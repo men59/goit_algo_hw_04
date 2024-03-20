@@ -1,13 +1,13 @@
 def total_salary(path):
     try:
-        with open(path, "r") as fh:
+        with open(path, "r", encoding= 'UTF-8') as fh:
             salary = []
             while True:
                 line = fh.readline()
                 if not line:
                     break
                 _line = line.split(',')
-                salary.append(int(_line[0]))  # Перше число в кожному рядку
+                salary.append(int(_line[1]))  # Перше число в кожному рядку
             total = sum(salary)
             count = len(salary)
             average = total / count
